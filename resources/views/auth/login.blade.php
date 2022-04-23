@@ -28,9 +28,9 @@
                             @enderror
                         </div>
                         <div class="inputBx password">
-                            <input id="password" type="password"
+                            <input id="password-input" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="current-password">
+                                autocomplete="current-password" >
                             <span>Password</span>
                             <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
                             <i class="fas fa-key"></i>

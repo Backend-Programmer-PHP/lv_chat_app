@@ -14,31 +14,38 @@
                 <div class="form">
                     <img class="img-fuilds" src="{{ asset('public/img/logo_app.png') }}">
                     <h2>Chat App</h2>
+                    {{-- error message --}}
+                    @error('email')
+                        <div class="error-message">
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        </div>
+                    @enderror
+                    @error('password')
+                        <div class="error-message">
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        </div>
+                    @enderror
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="inputBx">
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                 name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             <span>Email</span>
-                            <i class="fas fa-user-circle"></i>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <i class="fas fa-envelope"></i>
+
                         </div>
                         <div class="inputBx password">
                             <input id="password-input" type="password"
                                 class="form-control @error('password') is-invalid @enderror" name="password" required
-                                autocomplete="current-password" >
+                                autocomplete="current-password">
                             <span>Password</span>
                             <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
                             <i class="fas fa-key"></i>
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+
                         </div>
                         <label class="remember">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember"

@@ -154,3 +154,14 @@ function show_hide_password(target){
 	}
 	return false;
 }
+function show_hide_password_comfirm(target) {
+    var value = document.getElementById('password-new');
+	if (value.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		value.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		value.setAttribute('type', 'password');
+	}
+	return false;
+}

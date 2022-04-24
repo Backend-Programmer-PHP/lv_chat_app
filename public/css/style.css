@@ -7805,8 +7805,8 @@ section {
 
 .form .inputBx .fas {
     position: absolute;
-    top: 13px;
-    left: 13px;
+    top: 10px;
+    left: 5px;
 }
 
 .form .inputBx input[type=submit] {
@@ -7832,12 +7832,15 @@ section {
 
 .form .inputBx span {
     position: absolute;
-    left: 30px;
+    left: 25px;
+    top: 0;
+    bottom: 0;
     padding: 10px;
     display: inline-block;
     color: #fff;
     transition: 0.5s;
     pointer-events: none;
+    font-size: 12px;
 }
 
 .form .inputBx input:focus~span,
@@ -7875,3 +7878,12 @@ section {
     height: 100px;
     border-radius: 50px;
 }
+.error-message {
+    padding-bottom: 15px;
+    font-family: fangsong;
+    font-size: 13px;
+}
+.error-message .invalid-feedback {
+    color: #0f0d0d;
+}
+/*  */

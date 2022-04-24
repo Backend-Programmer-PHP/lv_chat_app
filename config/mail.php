@@ -43,7 +43,6 @@ return [
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
         ],
-
         'ses' => [
             'transport' => 'ses',
         ],
@@ -90,11 +89,14 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
-
+    // 'from' => [
+    //     'address' => env('MAIL_FROM_ADDRESS', 'ngoctam2303001@gmail.com'),
+    //     'name' => env('MAIL_FROM_NAME', 'Chat app'),
+    // ],
+    'from' => array(
+        'address' => 'myusername@gmail.com',
+        'name' => 'Chat app'
+    ),
     /*
     |--------------------------------------------------------------------------
     | Markdown Mail Settings
